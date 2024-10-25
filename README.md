@@ -6,3 +6,7 @@ MML_by_python-interface-202410
 $ pip install torch
 
 if failed, $ pip3 install torch --break-system-packages
+
+## check
+
+$ python3 check.py
