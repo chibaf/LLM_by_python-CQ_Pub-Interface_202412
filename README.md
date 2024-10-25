@@ -19,7 +19,7 @@ if noerror, check.py prints "check ended."
 
 <pre>
 >>> import json<br>
->>> import s_rd<br>
+>>> import s_rd     #import reading data set subprogram=s_rd.py<br>
 >>> file_path_train='japanese_train.jsonl'<br>
 >>> file_path_val='japanese_val.jsonl'<br>
 >>> texts,summaries=s_rd.read_data(file_path_train)<br>
@@ -34,3 +34,7 @@ if noerror, check.py prints "check ended."
 csebuetnlp/xl-sum: This repository contains the code, data, and models of the paper titled "XL-Sum: Large-Scale Multilingual Abstractive Summarization for 44 Languages" published in Findings of the Association for Computational Linguistics: ACL-IJCNLP 2021.
 
 https://github.com/csebuetnlp/xl-sum?tab=readme-ov-file#datasets
+
+12月号　Pythonで動かして学ぶ線形代数[LLM/姿勢推定/信号処理/GPS] 　
+
+https://www.cqpub.co.jp/interface/download/contents2024.htm
