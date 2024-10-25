@@ -1,6 +1,8 @@
 # MML_by_python-interface-202412
 MML_by_python-interface-202410
 
+## Pythonで作って学ぶLLM(大規模言語モデル）
+
 ## programs ran on Macbook Air M1
 
 ## installation of pytorch
