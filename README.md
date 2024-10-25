@@ -12,3 +12,5 @@ if failed, $ pip3 install torch --break-system-packages
 ## check
 
 $ python3 check.py
+
+if noerror, check.py prints "check ended."
