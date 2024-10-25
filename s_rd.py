@@ -1,7 +1,6 @@
 def read_data(file_path):
     # 学習データセットを保持するリスト
-# https://github.com/csebuetnlp/xl-sum?tab=readme-ov-file#datasets
-#    import json
+    import json
     texts = []
     summaries = []
 
