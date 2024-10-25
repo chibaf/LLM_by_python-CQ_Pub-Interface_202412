@@ -30,6 +30,15 @@ if no error, check.py prints "check ended."
 タイ北部のタムルアン洞窟で10日夜、中に閉じ込められていた少年12人とサッカー・コーチの計13人のうち、最後の少年4人とコーチが水路を潜り無事脱出した。その約3時間後には、洞窟内で少年たちと留まっていた海軍ダイバー3人と医師も生還した。17日間も洞窟内にいた13人の救出に、タイ国内外で多くの人が安心し、喜んでいる。<br>
 </pre>
 
+## check 3
+<pre>
+python3 testjson.py <br>
+all text:<br>
+救出作戦の間、洞窟内に少年たちと留まったタイ海軍のダイバーと医師も最後に無事脱出した。4人の写真は10日、タイ海軍...<br>
+（英語記事 Cave rescue: Elation as Thai boys and coach freed by divers）<br>
+summary:<br>
+タイ北部のタムルアン洞窟で10日夜、中に閉じ込められていた少年12人とサッカー・コーチの計13人のうち、最後の少年4人とコーチが水路を潜り無事脱出した。その約3時間後には、洞窟内で少年たちと留まっていた海軍ダイバー3人と医師も生還した。17日間も洞窟内にいた13人の救出に、タイ国内外で多くの人が安心し、喜んでいる。<br>
+</pre>
 ## references
 
 csebuetnlp/xl-sum: This repository contains the code, data, and models of the paper titled "XL-Sum: Large-Scale Multilingual Abstractive Summarization for 44 Languages" published in Findings of the Association for Computational Linguistics: ACL-IJCNLP 2021.
