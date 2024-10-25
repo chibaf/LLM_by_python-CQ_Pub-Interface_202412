@@ -9,11 +9,23 @@ $ pip install torch
 
 if failed, $ pip3 install torch --break-system-packages
 
-## check
+## check 1
 
 $ python3 check.py
 
 if noerror, check.py prints "check ended."
+
+## check 2
+
+<pre>
+>>> import json<br>
+>>> import s_rd<br>
+>>> file_path_train='japanese_train.jsonl'<br>
+>>> file_path_val='japanese_val.jsonl'<br>
+>>> texts,summaries=s_rd.read_data(file_path_train)<br>
+>>> print(texts[0])<br>
+
+</pre>
 
 ## references
 
