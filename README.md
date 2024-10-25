@@ -1,4 +1,4 @@
-# MML_by_python-interface-202412
+# LLM_by_python-interface-202412
 
 ## 第３章 Pythonで作って学ぶLLM(大規模言語モデル）
 
