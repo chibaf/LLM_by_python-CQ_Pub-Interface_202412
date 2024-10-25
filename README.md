@@ -18,7 +18,7 @@ if noerror, check.py prints "check ended."
 ## check 2
 
 <pre>
->>> import json<br>
+>>> import torch<br>
 >>> import s_rd     #import reading data set subprogram=s_rd.py<br>
 >>> file_path_train='japanese_train.jsonl'<br>
 >>> file_path_val='japanese_val.jsonl'<br>
