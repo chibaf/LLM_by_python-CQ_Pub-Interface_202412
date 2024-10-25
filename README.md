@@ -10,6 +10,10 @@ $ pip install torch
 
 if failed, $ pip3 install torch --break-system-packages
 
+## installation of pytorch : Raspberry Pi5
+
+pip3 install 'torch<2.5' --break-system-packages
+
 ## check 1
 
 $ python3 check.py
