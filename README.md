@@ -152,7 +152,9 @@ python3 tokenizer_test.py
 
 python3 prep_data.py
 
+prep_data.py
 
+https://github.com/chibaf/LLM_by_python-CQ_Pub-Interface_202412/blob/main/prep_data.py
 
 ## references
 
