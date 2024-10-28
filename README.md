@@ -150,6 +150,10 @@ python3 tokenizer_test.py
 
 ## 実装（２）自動要約AIを作成するためのデータの準備
 
+python3 prep_data.py
+
+
+
 ## references
 
 csebuetnlp/xl-sum: This repository contains the code, data, and models of the paper titled "XL-Sum: Large-Scale Multilingual Abstractive Summarization for 44 Languages" published in Findings of the Association for Computational Linguistics: ACL-IJCNLP 2021.
