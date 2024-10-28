@@ -8,7 +8,7 @@ block_size=500
 max_iters=50000000
 eval_interval=444
 learning_rate=1e-3
-device='cuda' if torch.cuda.is_available() else 'cpu'
+device='mps' if torch.mps.is_available() else 'cpu'
 
 eval_iters=444
 n_embd=64
