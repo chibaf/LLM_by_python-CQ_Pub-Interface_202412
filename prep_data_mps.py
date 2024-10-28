@@ -2,7 +2,7 @@ import torch
 import s_rd
 from tokenizer_class import Tokenizer 
 
-device = 'mps' if torch.mps.is_available() else 'cpu'  # for apple silicon
+
 
 # confirming correctly reading data
 file_path_train='japanese_train.jsonl'
@@ -23,8 +23,9 @@ val_data=""
 for text, symmary in zip(texts,summaries):
   val_data=val_data+"<BOS>"+text+"<SUMMARY>"+summary+"<EOS>"
 
-train_data=torch.tensor(tokenizer.encode(train_data),dtype=torch.long)
-val_data=torch.tensor(tokenizer.encode(val_data),dtype=torch.long)
+mps_device = torch.device("mps")
+train_data=torch.tensor(tokenizer.encode(train_data),mps_device,dtype=torch.long)
+val_data=torch.tensor(tokenizer.encode(val_data),mps_device,dtype=torch.long)
 
 print(train_data)
 print(val_data)

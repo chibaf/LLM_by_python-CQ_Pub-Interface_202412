@@ -2,6 +2,7 @@ import torch
 import s_rd
 from tokenizer_class import Tokenizer 
 
+device = 'mps' if torch.mps.is_available() else 'cpu'  # for apple silicon
 # data for generating Token+ID_pair
 file_path_train = 'japanese_train.jsonl'
 # reading data set and combining them to one string
