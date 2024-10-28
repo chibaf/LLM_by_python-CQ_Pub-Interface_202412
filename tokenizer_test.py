@@ -19,13 +19,13 @@ sample_summary=summaries[0]
 
 # encoding
 encoded_text=tokenizer.encode(sample_text)
-print("encoded text: ",encoded_text)
+#print("encoded text: ",encoded_text)
 encoded_summary=tokenizer.encode(sample_summary)
-print("encoded summary: ",encoded_summary)
+#print("encoded summary: ",encoded_summary)
 
 #decoding
 decoded_text=tokenizer.decode(encoded_text)
-print("encoded text: ",decoded_text)
+#print("encoded text: ",decoded_text)
 decoded_summary=tokenizer.decode(encoded_summary)
-print("encoded summary: ",decoded_summary)
+#print("encoded summary: ",decoded_summary)
 
