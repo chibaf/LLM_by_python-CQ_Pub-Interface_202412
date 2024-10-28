@@ -143,6 +143,9 @@ class Tokenizer:<br>
         return "".join([self.vocab_decode.get(idx, "<unk>") for idx in indices])<br>
 </pre>
 
+### sample code
+https://github.com/chibaf/LLM_by_python-CQ_Pub-Interface_202412/blob/main/tokenizer_test.py
+
 ## 実装（２）自動要約AIを作成するためのデータの準備
 
 ## references
