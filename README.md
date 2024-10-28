@@ -143,6 +143,8 @@ class Tokenizer:<br>
         return "".join([self.vocab_decode.get(idx, "<unk>") for idx in indices])<br>
 </pre>
 
+## 実装（２）自動要約AIを作成するためのデータの準備
+
 ## references
 
 csebuetnlp/xl-sum: This repository contains the code, data, and models of the paper titled "XL-Sum: Large-Scale Multilingual Abstractive Summarization for 44 Languages" published in Findings of the Association for Computational Linguistics: ACL-IJCNLP 2021.
