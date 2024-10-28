@@ -43,6 +43,104 @@ all text:<br>
 summary:<br>
 タイ北部のタムルアン洞窟で10日夜、中に閉じ込められていた少年12人とサッカー・コーチの計13人のうち、最後の少年4人とコーチが水路を潜り無事脱出した。その約3時間後には、洞窟内で少年たちと留まっていた海軍ダイバー3人と医師も生還した。17日間も洞窟内にいた13人の救出に、タイ国内外で多くの人が安心し、喜んでいる。<br>
 </pre>
+
+<pre>
+import json<br>
+import torch<br>
+import torch.nn as nn<br>
+from torch.nn import functional as F<br>
+<br>
+# hyperparameters<br>
+batch_size = 16 # how many independent sequences will we process in parallel?<br>
+block_size = 500 # what is the maximum context length for predictions?<br>
+max_iters = 50000000<br>
+eval_interval = 100<br>
+learning_rate = 1e-3<br>
+device = 'cuda' if torch.cuda.is_available() else 'cpu'<br>
+eval_iters = 200<br>
+n_embd = 64<br>
+n_head = 4<br>
+n_layer = 4<br>
+dropout = 0.0<br>
+# ------------<br>
+<br>
+torch.manual_seed(1337)<br>
+<br>
+def read_data(file_path):<br>
+    # 学習データセットを保持するリスト<br>
+    texts = []<br>
+    summaries = []<br>
+<br>
+    # JSONLファイルから text と summary を抽出<br>
+    with open(file_path, 'r', encoding='utf-8') as file:<br>
+        for line in file:<br>
+            json_data = json.loads(line)<br>
+            text = json_data.get("text")<br>
+            summary = json_data.get("summary")<br>
+            if text and summary:<br>
+                texts.append(text)<br>
+                summaries.append(summary)<br>
+    return texts, summaries<br>
+<br>
+# Tokenizerクラスの実装<br>
+class Tokenizer:<br>
+<br>
+    @staticmethod<br>
+    def create_vocab(dataset):<br>
+        """<br>
+        Create a vocabulary from a dataset.<br>
+<br>
+        Args:<br>
+            dataset (str): Text dataset to be used to create the character vocab.<br>
+<br>
+        Returns:<br>
+            Dict[str, int]: Character vocabulary.<br>
+        """<br>
+        vocab = {<br>
+            token: index<br>
+            for index, token in enumerate(sorted(list(set(dataset))))<br>
+        }<br>
+<br>
+        # Adding unknown token<br>
+        vocab["<unk>"] = len(vocab)<br>
+<br>
+        return vocab<br>
+<br>
+    def __init__(self, vocab):<br>
+        """<br>
+        Initialize the tokenizer.<br>
+<br>
+        Args:<br>
+            vocab (Dict[str, int]): Vocabulary.<br>
+        """<br>
+        self.vocab_encode = {str(k): int(v) for k, v in vocab.items()}<br>
+        self.vocab_decode = {v: k for k, v in self.vocab_encode.items()}<br>
+<br>
+    def encode(self, text):<br>
+        """<br>
+        Encode a text in level character.<br>
+<br>
+        Args:<br>
+            text (str): Input text to be encoded.<br>
+
+        Returns:<br>
+            List[int]: List with token indices.
+        """
+        return [self.vocab_encode.get(char, self.vocab_encode["<unk>"]) for char in text]<br>
+<br>
+    def decode(self, indices):<br>
+        """<br>
+        Decode a list of token indices.<br>
+<br>
+        Args:<br>
+            indices (List[int]): List of token indices.<br>
+<br>
+        Returns:<br>
+            str: The decoded text.<br>
+        """<br>
+        return "".join([self.vocab_decode.get(idx, "<unk>") for idx in indices])<br>
+</pre>
+
 ## references
 
 csebuetnlp/xl-sum: This repository contains the code, data, and models of the paper titled "XL-Sum: Large-Scale Multilingual Abstractive Summarization for 44 Languages" published in Findings of the Association for Computational Linguistics: ACL-IJCNLP 2021.
