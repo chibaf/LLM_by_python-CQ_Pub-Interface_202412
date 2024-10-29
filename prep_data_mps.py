@@ -2,8 +2,7 @@ import torch
 import s_rd
 from tokenizer_class import Tokenizer 
 
-
-
+device = torch.device("mps")
 # confirming correctly reading data
 file_path_train='japanese_train.jsonl'
 file_path_val='japanese_val.jsonl'
@@ -23,9 +22,8 @@ val_data=""
 for text, symmary in zip(texts,summaries):
   val_data=val_data+"<BOS>"+text+"<SUMMARY>"+summary+"<EOS>"
 
-mps_device = torch.device("mps")
-train_data=torch.tensor(tokenizer.encode(train_data),mps_device,dtype=torch.long)
-val_data=torch.tensor(tokenizer.encode(val_data),mps_device,dtype=torch.long)
+train_data=torch.tensor(tokenizer.encode(train_data),device=device,dtype=torch.long)
+val_data=torch.tensor(tokenizer.encode(val_data),device=device,dtype=torch.long)
 
 print(train_data)
 print(val_data)

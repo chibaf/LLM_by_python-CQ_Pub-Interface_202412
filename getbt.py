@@ -1,7 +1,8 @@
-# data loading
+# extractionextraction of learning data: extraction sevral cases for batch processing
 def get_batch(split):
   import torch
   from prep_data_sub import prep_d 
+  blocksize=500  # treating until 500
   train_data,val_data=prep_d()
   # generate a small batch of data of inputs x and targets y
   data = train_data if split == 'train' else val_data
