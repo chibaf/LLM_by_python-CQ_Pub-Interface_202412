@@ -2,7 +2,9 @@
 def get_batch(split):
   import torch
   from prep_data_sub import prep_d 
-  blocksize=500  # treating until 500
+  block_size=500  # treating until 500
+  batch_size=16
+  device = 'mps' if torch.mps.is_available() else 'cpu'  # for apple silicon
   train_data,val_data=prep_d()
   # generate a small batch of data of inputs x and targets y
   data = train_data if split == 'train' else val_data
