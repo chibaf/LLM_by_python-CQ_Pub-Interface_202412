@@ -59,7 +59,9 @@ prep_data.py:
 
 https://github.com/chibaf/LLM_by_python-CQ_Pub-Interface_202412/blob/main/prep_data.py
 
-https://x.com/chibafx/status/1851275765037617356/photo/1![image](https://github.com/user-attachments/assets/9aa03b48-a5d0-4389-99b8-8d193d055c8c)
+time python3 getbt_test.py 
+
+![image](https://github.com/user-attachments/assets/9d0f0e0a-b139-4ac7-bdaf-1562463b2a0b)
 
 
 ## references
