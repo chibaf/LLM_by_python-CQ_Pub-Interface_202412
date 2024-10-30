@@ -78,3 +78,7 @@ https://github.com/csebuetnlp/xl-sum?tab=readme-ov-file#datasets
 12月号　Pythonで動かして学ぶ線形代数[LLM/姿勢推定/信号処理/GPS] 　
 
 https://www.cqpub.co.jp/interface/download/contents2024.htm
+
+Accelerated PyTorch training on Mac - Metal - Apple Developer
+
+https://developer.apple.com/metal/pytorch/
