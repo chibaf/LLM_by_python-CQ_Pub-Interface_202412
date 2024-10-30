@@ -63,6 +63,9 @@ time python3 getbt_test.py
 
 ![image](https://github.com/user-attachments/assets/9d0f0e0a-b139-4ac7-bdaf-1562463b2a0b)
 
+## 実装(3) 埋め込み層
+
+埋め込み層の生成：generate_emb.py
 
 ## references
 
