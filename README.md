@@ -67,6 +67,8 @@ time python3 getbt_test.py
 
 埋め込み層の生成：generate_emb.py
 
+埋め込み層にデータを与える：set_data_to_emb.py
+
 ## references
 
 csebuetnlp/xl-sum: This repository contains the code, data, and models of the paper titled "XL-Sum: Large-Scale Multilingual Abstractive Summarization for 44 Languages" published in Findings of the Association for Computational Linguistics: ACL-IJCNLP 2021.
